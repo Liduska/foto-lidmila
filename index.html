@@ -1,0 +1,9 @@
+---
+layout: default
+---
+
+<div id="gallery">
+    {% for photo in site.data.homepage.photos %}
+    <img src="{{photo.image}}" />
+    {% endfor %}
+</div>

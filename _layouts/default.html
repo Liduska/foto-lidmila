@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} &middot; {% endif %} {{ site.title }}</title>
+  <meta content="{{ site.title }}" property="og:site_name">
+  {% if page.title %}
+  <meta content="{{ page.title | escape }}" property="og:title">
+  {% else %}
+  <meta content="{{ site.title }}" property="og:title">
+  {% endif %}
+  {% if page.excerpt %}
+  <meta name="description" content="{{ page.excerpt | strip_html }}">
+  <meta content="{{ page.excerpt | strip_html }}" property="og:description">
+  {% else %}
+  <meta name="description" content="{{ site.description }}">
+  <meta content="{{ site.description }}" property="og:description">
+  {% endif %}
+  <link href="/static/styles/output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Caudex|Playfair+Display&amp;subset=latin-ext" rel="stylesheet">
+</head>
+
+<body class="font-caudex text-grey-darkest subpixel-antialiased">
+  <header class="text-center pt-4 tracking-wide">
+    <h1 class="font-serif mt-8 mb-6 font-thin"><a href="/" class="no-underline text-grey-darkest">Foto Lidmila</a></h1>
+    <h2 class="font-sans font-thin text-sm text-grey tracking-xxx-wide">VÁŠ PORTRÉTNÍ FOTOGRAF V PRAZE</h2>
+    <ul class="my-8 text-xl list-reset">
+      {%- assign default_paths = site.pages | map: "path" -%}
+      {%- assign page_paths = site.header_pages | default: default_paths -%}
+      {%- for path in page_paths -%}
+      {%- assign my_page = site.pages | where: "path", path | first -%}
+      {%- if my_page.title -%}
+        <li class="inline mx-8">
+          <a class="no-underline text-grey-darkest" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+        </li>
+      {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </header>
+   {{ content }}
+  <footer class="text-center my-8">
+    © fotografie a copy: Lidmila Maršálkova
+  </footer>
+  <script src="/static/output.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  @apply .justify-between;
+
+   & img {
+    padding: 2.5px;
+    object-fit: cover;
+    width: calc(100%/3);
+    height: 32vw;
+  }
+}

@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+
+media_folder: "uploads"
+public_folder: "uploads"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "pages"
+    label: "Pages"
+    delete: false
+    description: ""
+    files:
+      - file: "_data/homepage.yml"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - label: "Photos"
+            name: "photos"
+            widget: "list"
+            fields:
+              - {label: Image, name: image, widget: image}
