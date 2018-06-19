@@ -23,7 +23,9 @@ collections: # A list of collections the CMS should be able to edit
     label: "Galleries"
     description: ""
     folder: "galleries"
+    create: true
     fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "gallery"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
       - label: "Photos"
