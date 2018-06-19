@@ -19,3 +19,15 @@ collections: # A list of collections the CMS should be able to edit
             widget: "list"
             fields:
               - {label: Image, name: image, widget: image}
+  - name: "galleries"
+    label: "Galleries"
+    description: ""
+    folder: "galleries"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Photos"
+        name: "photos"
+        widget: "list"
+        fields:
+          - {label: Image, name: image, widget: image}
