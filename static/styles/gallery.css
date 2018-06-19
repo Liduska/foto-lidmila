@@ -10,3 +10,12 @@
     height: 32vw;
   }
 }
+
+#gallery-page {
+  column-gap: 5px;
+  column-count: 2;
+
+  @screen md {
+    column-count: 3;
+  }
+}
