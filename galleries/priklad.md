@@ -1,6 +1,6 @@
 ---
 layout: gallery
-title: ŽENY
+title: Ženy
 photos:
   - image: /uploads/_dsc0393.jpg
   - image: /uploads/DSC0397.JPG
