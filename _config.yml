@@ -18,6 +18,10 @@ description: "Spolehlivá a časově flexibilní portrétní fotografka. Jsem tu
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
+header_pages:
+  - "galleries/zeny.md"
+  - "kontakt.html"
+
 # Build settings
 markdown: kramdown
 permalink: pretty
